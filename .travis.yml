@@ -1,5 +1,5 @@
 language: go
-go_import_path: github.com/ethereum/go-ethereum
+go_import_path: github.com/engram-network/striatum
 sudo: false
 jobs:
   allow_failures:
@@ -38,7 +38,7 @@ jobs:
       before_install:
         - export DOCKER_CLI_EXPERIMENTAL=enabled
       script:
-        - go run build/ci.go docker -image -manifest amd64,arm64 -upload ethereum/client-go
+        - go run build/ci.go docker -image -manifest amd64,arm64 -upload engramnet/striatum
 
     - stage: build
       if: type = push
@@ -55,7 +55,7 @@ jobs:
       before_install:
         - export DOCKER_CLI_EXPERIMENTAL=enabled
       script:
-        - go run build/ci.go docker -image -manifest amd64,arm64 -upload ethereum/client-go
+        - go run build/ci.go docker -image -manifest amd64,arm64 -upload engramnet/striatum
 
     # This builder does the Linux Azure uploads
     - stage: build

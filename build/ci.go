@@ -85,15 +85,15 @@ var (
 		},
 		{
 			BinaryName:  "bootnode",
-			Description: "Engram bootnode.",
+			Description: "Striatum bootnode.",
 		},
 		{
 			BinaryName:  "evm",
-			Description: "Developer utility version of the GVM (Engram Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode.",
+			Description: "Developer utility version of the RVM (Engram Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode.",
 		},
 		{
 			BinaryName:  "striatum",
-			Description: "Engram CLI client.",
+			Description: "Striatum CLI client.",
 		},
 		{
 			BinaryName:  "rlpdump",
@@ -101,7 +101,7 @@ var (
 		},
 		{
 			BinaryName:  "clef",
-			Description: "Engram account management tool.",
+			Description: "Striatum account management tool.",
 		},
 	}
 

@@ -197,7 +197,7 @@ var (
 	}
 )
 
-var app = flags.NewApp("the striatum command line interface")
+var app = flags.NewApp("The Striatum command line interface")
 
 func init() {
 	// Initialize the CLI app and start Geth
@@ -244,7 +244,7 @@ func init() {
 		debug.Flags,
 		metricsFlags,
 	)
-	flags.AutoEnvVars(app.Flags, "GETH")
+	flags.AutoEnvVars(app.Flags, "STRM")
 
 	app.Before = func(ctx *cli.Context) error {
 		maxprocs.Set() // Automatically set GOMAXPROCS to match Linux container CPU quota.
@@ -252,7 +252,7 @@ func init() {
 		if err := debug.Setup(ctx); err != nil {
 			return err
 		}
-		flags.CheckEnvVars(ctx, app.Flags, "GETH")
+		flags.CheckEnvVars(ctx, app.Flags, "STRM")
 		return nil
 	}
 	app.After = func(ctx *cli.Context) error {
@@ -284,7 +284,7 @@ func prepare(ctx *cli.Context) {
 		log.Info("Starting Striatum on Holesky testnet...")
 
 	case ctx.IsSet(utils.EngramFlag.Name):
-		log.Info("Starting Striatum on Engram Tokio testnet...")
+		log.Info("Starting Striatum on Engram testnet...")
 	
 	case ctx.IsSet(utils.DeveloperFlag.Name):
 		log.Info("Starting Striatum in ephemeral dev mode...")

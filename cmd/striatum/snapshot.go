@@ -53,7 +53,7 @@ var (
 					utils.BloomFilterSizeFlag,
 				}, utils.NetworkFlags, utils.DatabasePathFlags),
 				Description: `
-striatum snapshot prune-state <state-root>
+Striatum snapshot prune-state <state-root>
 will prune historical state data with the help of the state snapshot.
 All trie nodes and contract codes that do not belong to the specified
 version state will be deleted from the database. After pruning, only
@@ -73,7 +73,7 @@ WARNING: it's only supported in hash mode(--state.scheme=hash)".
 					utils.StateSchemeFlag,
 				}, utils.NetworkFlags, utils.DatabasePathFlags),
 				Description: `
-striatum snapshot verify-state <state-root>
+Striatum snapshot verify-state <state-root>
 will traverse the whole accounts and storages set based on the specified
 snapshot and recalculate the root hash of state for verification.
 In other words, this command does the snapshot to trie conversion.
@@ -86,7 +86,7 @@ In other words, this command does the snapshot to trie conversion.
 				Action:    checkDanglingStorage,
 				Flags:     flags.Merge(utils.NetworkFlags, utils.DatabasePathFlags),
 				Description: `
-striatum snapshot check-dangling-storage <state-root> traverses the snap storage 
+Striatum snapshot check-dangling-storage <state-root> traverses the snap storage 
 data, and verifies that all snapshot storage data has a corresponding account. 
 `,
 			},
@@ -97,7 +97,7 @@ data, and verifies that all snapshot storage data has a corresponding account.
 				Action:    checkAccount,
 				Flags:     flags.Merge(utils.NetworkFlags, utils.DatabasePathFlags),
 				Description: `
-striatum snapshot inspect-account <address | hash> checks all snapshot layers and prints out
+Striatum snapshot inspect-account <address | hash> checks all snapshot layers and prints out
 information about the specified address. 
 `,
 			},
@@ -110,7 +110,7 @@ information about the specified address.
 					utils.StateSchemeFlag,
 				}, utils.NetworkFlags, utils.DatabasePathFlags),
 				Description: `
-striatum snapshot traverse-state <state-root>
+Striatum snapshot traverse-state <state-root>
 will traverse the whole state from the given state root and will abort if any
 referenced trie node or contract code is missing. This command can be used for
 state integrity verification. The default checking target is the HEAD state.
@@ -127,7 +127,7 @@ It's also usable without snapshot enabled.
 					utils.StateSchemeFlag,
 				}, utils.NetworkFlags, utils.DatabasePathFlags),
 				Description: `
-striatum snapshot traverse-rawstate <state-root>
+Striatum snapshot traverse-rawstate <state-root>
 will traverse the whole state from the given root and will abort if any referenced
 trie node or contract code is missing. This command can be used for state integrity
 verification. The default checking target is the HEAD state. It's basically identical
