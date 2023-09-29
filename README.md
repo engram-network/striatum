@@ -1,10 +1,8 @@
-<h1 align="center"><strong>Under Developments</strong></h1>
-
-<h1 align="center"><strong>Striatum</strong></h1>
+<h1 align="center"><strong>Striatum Stable</strong></h1>
 Official Golang execution layer implementation of the Engram protocol. 
 
 Automated builds are available for stable releases and the unstable master branch. Binary
-archives are published at https://str.engram.tech/downloads/.
+archives are published at https://docs.stryatum.com/.
 
 ## Building the source
 
