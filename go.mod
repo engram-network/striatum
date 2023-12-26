@@ -1,5 +1,4 @@
-module github.com/ethereum/go-ethereum
-
+module github.com/engram-network/striatum
 go 1.20
 
 require (
